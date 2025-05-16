@@ -4,6 +4,8 @@
  */
 package linkedliststarter;
 
+import hospital.Patient;
+
 /**
  *
  * @author michael.roy-diclemen
@@ -18,7 +20,10 @@ public class SinglyLinkedList implements ILinkedList{
      */
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        int size = 0;
+        while()
+        
+        return size;
     }
 
     /**
@@ -77,7 +82,7 @@ public class SinglyLinkedList implements ILinkedList{
      * @return true if successfuuly added, false otherwise
      */
     @Override
-    public boolean add(String item) {
+    public boolean add(Patient item) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
@@ -88,7 +93,7 @@ public class SinglyLinkedList implements ILinkedList{
      * @return true if successfuuly added, false otherwise
      */
     @Override
-    public boolean add(String item, int index) {
+    public boolean add(Patient item, int index) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     

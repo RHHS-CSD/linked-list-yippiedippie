@@ -4,18 +4,20 @@
  */
 package linkedliststarter;
 
+import hospital.Patient;
+
 /**
  *
  * @author michael.roy-diclemen
  */
 public interface ILinkedList {
     public String toString();
-public int size();
+public int size(); //99999
 public void clear();
 public boolean remove(Data item);
 public boolean remove(int index);
 public int indexOf(Data item);
-public Data get(int index);
-public boolean add(String item);
-public boolean add(String item, int index);
+public Data get(int index); //((((
+public boolean add(Patient item);//9999
+public boolean add(Patient item, int index);//9999
 }
