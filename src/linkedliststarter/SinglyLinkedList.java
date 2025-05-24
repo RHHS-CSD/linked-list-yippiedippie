@@ -21,8 +21,11 @@ public class SinglyLinkedList implements ILinkedList{
     @Override
     public int size() {
         int size = 0;
-        while()
-        
+        Node current = head;
+        while(current != tail){
+            size++;
+            current = current.getNext();
+        }
         return size;
     }
 
@@ -71,9 +74,21 @@ public class SinglyLinkedList implements ILinkedList{
      * @param index The index to be retrieved
      * @return The data item, null if bad index
      */
-    @Override
-    public Data get(int index) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public Patient get(int index) {
+        if (index < 0){
+            return null;
+        }
+        Node current = head;
+        for (int i = 0; i < index; i++){
+            if (current == null){
+                return null;
+            }
+            current = current.getNext();
+        }
+        if (current == null){
+                return null;
+        }
+        return current.getItem();
     }
 
     /**
@@ -83,7 +98,16 @@ public class SinglyLinkedList implements ILinkedList{
      */
     @Override
     public boolean add(Patient item) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        Node end = new Node(item);
+        if (head == null){
+            head = end;
+            tail = end;
+        }
+        else{
+            tail.setNext(end);
+            tail = end;
+        }
+        return true;
     }
 
     /**
@@ -94,8 +118,34 @@ public class SinglyLinkedList implements ILinkedList{
      */
     @Override
     public boolean add(Patient item, int index) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        Node adding = new Node(item);
+        if (index < 0){
+            return false;
+        }
+        if (index == 0){
+            adding.setNext(head);
+            head = adding;
+            if (tail == null){
+                tail = adding;
+            }
+            return true;
+        }
+        Node current = head;
+        for (int i = 0; i < index - 1; i++){
+            if (current == null){
+                return false;
+            }
+            current = current.getNext();
+        }
+        if (current == null){
+                return false;
+        }
+
+        adding.setNext(current.getNext());
+        current.setNext(adding);
+        if (adding.getNext() == null){
+            tail = adding;
+        }
+        return true;
     }
-    
-    
 }

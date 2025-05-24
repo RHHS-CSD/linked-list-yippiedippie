@@ -17,7 +17,7 @@ public void clear();
 public boolean remove(Data item);
 public boolean remove(int index);
 public int indexOf(Data item);
-public Data get(int index); //((((
+public Patient get(int index); //((((
 public boolean add(Patient item);//9999
 public boolean add(Patient item, int index);//9999
 }
