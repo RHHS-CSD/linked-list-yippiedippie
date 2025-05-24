@@ -11,7 +11,7 @@ import hospital.Patient;
  * @author michael.roy-diclemen
  */
 public class Node {
-    private Patient item = null;
+    private Patient item;
     private Node next = null;
     
     public Node(Patient insert){

@@ -13,14 +13,16 @@ import hospital.Patient;
 public class SinglyLinkedList implements ILinkedList{
     private Node head;
     private Node tail;
-
     /**
      * Return the size of the Linked List
      * @return an int representing the size
      */
     @Override
     public int size() {
-        int size = 0;
+        if (head == null){
+            return 0;
+        }
+        int size = 1;
         Node current = head;
         while(current != tail){
             size++;
@@ -80,9 +82,6 @@ public class SinglyLinkedList implements ILinkedList{
         }
         Node current = head;
         for (int i = 0; i < index; i++){
-            if (current == null){
-                return null;
-            }
             current = current.getNext();
         }
         if (current == null){

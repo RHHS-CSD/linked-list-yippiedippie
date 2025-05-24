@@ -11,7 +11,7 @@ import hospital.Patient;
  * @author michael.roy-diclemen
  */
 public interface ILinkedList {
-    public String toString();
+public String toString();
 public int size(); //99999
 public void clear();
 public boolean remove(Data item);
